@@ -40,3 +40,76 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+const headerLinks = document.querySelectorAll('nav a');
+
+const headerLinksArray = Array.from(headerLinks);
+
+
+let counter = 1;
+headerLinksArray.map(link => {
+  link.classList.add('italic');
+  link.textContent = siteContent["nav"][`nav-item-${counter}`];
+  counter++;
+});
+
+// headerLinksArray[0].textContent = siteContent["nav"]["nav-item-1"];
+// headerLinksArray[1].textContent = siteContent["nav"]["nav-item-2"];
+// headerLinksArray[2].textContent = siteContent["nav"]["nav-item-3"];
+// headerLinksArray[3].textContent = siteContent["nav"]["nav-item-4"];
+// headerLinksArray[4].textContent = siteContent["nav"]["nav-item-5"];
+// headerLinksArray[5].textContent = siteContent["nav"]["nav-item-6"];
+
+document.querySelector("#logo-img").src = "http://localhost:9000/img/logo.png";
+
+document.querySelector(".cta-text h1").textContent = siteContent['cta']['h1'];
+
+document.querySelector(".cta-text button").textContent = siteContent['cta']['button'];
+
+document.querySelector('#cta-img').src="http://localhost:9000/img/cta.png";
+
+const topContent = document.querySelector('.top-content');
+
+topContent.querySelector('.text-content:nth-of-type(1) h4').textContent = siteContent['main-content']['features-h4'];
+
+topContent.querySelector('.text-content:nth-of-type(1) p').textContent = siteContent['main-content']['features-content'];
+
+topContent.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
+
+topContent.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
+
+document.querySelector('#middle-img').src="http://localhost:9000/img/accent.png";
+
+const bottomContent = document.querySelector('.bottom-content');
+
+bottomContent.querySelector('.text-content:nth-of-type(1) h4').textContent = siteContent['main-content']['services-h4'];
+
+bottomContent.querySelector('.text-content:nth-of-type(1) p').textContent = siteContent['main-content']['services-content'];
+
+bottomContent.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4'];
+
+bottomContent.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content'];
+
+bottomContent.querySelector('.text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4'];
+
+bottomContent.querySelector('.text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content'];
+
+const contact = document.querySelector('.contact');
+
+const contactHeading = contact.querySelector('h4');
+const contactAddress = contact.querySelector('p');
+const contactPhone = contactAddress.nextElementSibling;
+const contactEmail = contactPhone.nextElementSibling;
+
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
+contactAddress.textContent = siteContent['contact']['address'];
+
+contactPhone.textContent = siteContent['contact']['phone'];
+
+contactEmail.textContent = siteContent['contact']['email'];
+
+document.querySelector('footer a').textContent = siteContent['footer']['copyright'];
+
+document.querySelector('footer a').classList.add('bold');
